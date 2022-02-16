@@ -107,9 +107,6 @@ border-color: rgb(255, 97, 100);</string>
          <string>Datos</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="1" column="5">
-          <widget class="QTextEdit" name="textEdit"/>
-         </item>
          <item row="2" column="0" colspan="6">
           <widget class="QTableWidget" name="tableWidget"/>
          </item>
@@ -174,6 +171,9 @@ border-color: rgb(255, 97, 100);</string>
             </widget>
            </item>
           </layout>
+         </item>
+         <item row="1" column="5">
+          <widget class="QListView" name="listView"/>
          </item>
         </layout>
        </widget>
