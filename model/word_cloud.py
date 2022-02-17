@@ -7,6 +7,11 @@ nltk.download('stopwords')
 import matplotlib.pyplot as plt
 
 class WordCloudI():
+    """Clase auxiliar para generar la nube de palabras.
+    
+    Contiene lo necesario para generar la nube
+    de palabras.
+    """
     def __init__(self, text, max_words = 40):
         self.text = text
         self.max_words = max_words

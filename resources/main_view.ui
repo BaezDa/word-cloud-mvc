@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>696</width>
-    <height>558</height>
+    <width>728</width>
+    <height>590</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,30 @@
       <x>0</x>
       <y>0</y>
       <width>691</width>
-      <height>513</height>
+      <height>561</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="2">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="1">
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="0" rowspan="2">
       <widget class="QPushButton" name="ButtonOpen">
        <property name="sizePolicy">
@@ -77,26 +97,6 @@ border-color: rgb(255, 97, 100);</string>
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="Line" name="line">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item row="2" column="0" colspan="3">
       <widget class="QTabWidget" name="tabWidget">
        <property name="font">
@@ -105,7 +105,7 @@ border-color: rgb(255, 97, 100);</string>
         </font>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -148,7 +148,7 @@ border-color: rgb(255, 97, 100);</string>
          <item row="0" column="2">
           <widget class="QLabel" name="label">
            <property name="text">
-            <string>Columnas</string>
+            <string>Filas</string>
            </property>
           </widget>
          </item>
@@ -212,7 +212,7 @@ border-color: rgb(255, 97, 100);</string>
            <x>10</x>
            <y>60</y>
            <width>661</width>
-           <height>371</height>
+           <height>411</height>
           </rect>
          </property>
          <property name="frameShape">
@@ -275,7 +275,7 @@ border-color: rgb(255, 97, 100);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>696</width>
+     <width>728</width>
      <height>21</height>
     </rect>
    </property>

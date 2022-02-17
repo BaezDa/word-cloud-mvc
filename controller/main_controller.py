@@ -20,19 +20,19 @@ class MainController():
         self.model = model
         self.view = view
         
+        #Valores iniciales del modelo y spinbox        
         self.view.listView.setModel(self.model)
         self.view.spinBox.setValue(10)
 
-        #Canvas
        
         
-        #Primer Tab
         self.view.ButtonOpen.clicked.connect(self.open_file)
+        
+        #Primer Tab
         self.view.BtnDescribe.clicked.connect(self.data_head)
         self.view.BtnAceptar.clicked.connect(self.add)
         self.view.BtnReducir.clicked.connect(self.reduce_db)
 
-        # self.view.btn.clicked.connect(self.onBtnMainClicked)
 
         self.path = ""
         
@@ -139,9 +139,19 @@ class MainController():
         correspondiente.
         """
         text =  " ".join(review for review in self.all_data['Texto'])
-        words = WordCloudI(text, max_words=20).generate_word_cloud()
-        kwargs = dict(alpha=0.5, bins=100, edgecolor = 'black',  linewidth=1, color='#F2AB6D')
-        self.view.mpl_canvas_hist.axes.bar(list(words.words_.keys()),words.words_.values())
-        self.view.mpl_canvas_hist.axes.tick_params(axis="x", labelrotation=90)
+        words = WordCloudI(text, max_words=30).generate_word_cloud()
+        data_list = []
+        
+        for key in words.words_.keys():
+            data_list.append(words.words_[key])
+            data_list.append(key)
+            
+        # self.view.mpl_canvas_hist.axes.bar(list(words.words_.keys()),words.words_.values())
+        kwargs = dict(bins=30, edgecolor = 'black',  linewidth=1, color='#F2AB6D')
+        self.view.mpl_canvas_hist.axes.hist(data_list, **kwargs)
+        self.view.mpl_canvas_hist.axes.set_title('Frecuencia de palabras')
+        self.view.mpl_canvas_hist.axes.set_ylabel('Frecuencia')
+        self.view.mpl_canvas_hist.axes.set_ylabel('Palabras')
+        self.view.mpl_canvas_hist.axes.tick_params(axis="x", labelrotation=90, labelsize=5)
         self.view.mpl_canvas_hist.setParent(self.view.frameHist)
         self.view.mpl_canvas_hist.show()

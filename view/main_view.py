@@ -8,5 +8,5 @@ class MainView(QMainWindow, Ui_MainWindow):
         QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
         self.file_dialog = QFileDialog(self)
-        self.mpl_canvas_cloud = MplCanvas(self, width=5, height=4, dpi=100)
-        self.mpl_canvas_hist = MplCanvas(self, width=5, height=4, dpi=100)
+        self.mpl_canvas_cloud = MplCanvas(self, width=6, height=4, dpi=100)
+        self.mpl_canvas_hist = MplCanvas(self, width=6, height=4, dpi=100)
