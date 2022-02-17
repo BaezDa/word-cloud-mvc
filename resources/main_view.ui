@@ -105,7 +105,7 @@ border-color: rgb(255, 97, 100);</string>
         </font>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -206,19 +206,6 @@ border-color: rgb(255, 97, 100);</string>
           <string>Ver nube</string>
          </property>
         </widget>
-        <widget class="QLabel" name="photo">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>50</y>
-           <width>681</width>
-           <height>391</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
         <widget class="QFrame" name="frameNube">
          <property name="geometry">
           <rect>
@@ -241,38 +228,7 @@ border-color: rgb(255, 97, 100);</string>
          <string>Histograma</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="1" column="0" colspan="2">
-          <widget class="QFrame" name="frame">
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QComboBox" name="comboBox"/>
-         </item>
-         <item row="0" column="2">
-          <widget class="QComboBox" name="comboBox_3"/>
-         </item>
          <item row="0" column="3">
-          <widget class="QPushButton" name="pushButton">
-           <property name="font">
-            <font>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Graficar</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QComboBox" name="comboBox_2"/>
-         </item>
-         <item row="0" column="4">
           <spacer name="horizontalSpacer_3">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -284,6 +240,28 @@ border-color: rgb(255, 97, 100);</string>
             </size>
            </property>
           </spacer>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="BtnGraficar">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Graficar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="4">
+          <widget class="QFrame" name="frameHist">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
