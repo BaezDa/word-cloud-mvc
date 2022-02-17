@@ -10,9 +10,13 @@ class ListModel(QtCore.QAbstractListModel):
     def data(self, index, role):
         if role == Qt.DisplayRole:
             # See below for the data structure.
-            status, text = self.todos[index.row()]
+            text = self.todos[index.row()]
             # Return the todo text only.
             return text
+        
+    def get_data(self):
+        return self.todos
 
+    
     def rowCount(self, index):
         return len(self.todos)
