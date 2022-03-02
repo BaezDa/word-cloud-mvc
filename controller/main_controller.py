@@ -2,7 +2,6 @@ import os
 import sys
 from os.path import dirname, realpath
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
-# from PyQt5.uic import loadUiType
 from pathlib import Path
 
 from model.word_cloud import WordCloudI
@@ -20,6 +19,9 @@ class MainController():
         self.model = model
         self.view = view
         
+        self.path = ""
+        
+        
         #Valores iniciales del modelo y spinbox        
         self.view.listView.setModel(self.model)
         self.view.spinBox.setValue(10)
@@ -34,10 +36,10 @@ class MainController():
         self.view.BtnReducir.clicked.connect(self.reduce_db)
 
 
-        self.path = ""
         
         #Segundo Tab
         self.view.BtnCloud.clicked.connect(self.show_cloud)
+        
         
         #Tercer Tab
         self.view.BtnGraficar.clicked.connect(self.show_hist)

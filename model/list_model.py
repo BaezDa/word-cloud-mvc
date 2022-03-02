@@ -15,7 +15,8 @@ class ListModel(QtCore.QAbstractListModel):
         self.todos = todos or []
 
     def data(self, index, role):
-        """Retorna un elemento de la lista.
+        """Retorna un elemento de la lista en base
+        a su index y role.
         
         
         Args:

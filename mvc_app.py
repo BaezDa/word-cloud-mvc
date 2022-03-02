@@ -6,6 +6,8 @@ from view.main_view import MainView
 
 
 if __name__ == "__main__":
+    """Punto de inicio de la aplicación.
+    """
     app = QApplication([])
     model = ListModel()
     main_view = MainView()

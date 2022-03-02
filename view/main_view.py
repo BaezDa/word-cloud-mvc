@@ -4,6 +4,13 @@ from view.main_view_generated_ui import Ui_MainWindow
 from view.mpl_canvas_view import MplCanvas
 
 class MainView(QMainWindow, Ui_MainWindow):
+   """Clase complementaria para extender las funcionalidades
+   de la vista.
+
+   Args:
+       QMainWindow (_type_): _description_
+       Ui_MainWindow (_type_): _description_
+   """
    def __init__(self, *args, **kwargs):
         QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
