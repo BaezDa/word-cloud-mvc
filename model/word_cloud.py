@@ -16,7 +16,7 @@ class WordCloudI():
         self.text = text
         self.max_words = max_words
         self.stop_words = set(stopwords.words('spanish'))
-        self.stop_words.update(["t", "co", "https", "t co", "https://t.co/", "pack", "LunesDeGanarSeguidores FelizLunes", "SabadoDeGanarSeguidores FelizSabado", "MiercolesDeGanarSeguidores FelizMiercoles", "DomingoDeGanarSeguidores FelizDomingo", "ViernesDeGanarSeguidores FelizViernes", "ven", "Feliz lunes", "persona", "Premium up", "quiero", "FelizDomingo"])
+        self.stop_words.update(["t", "co", "https", "t co", "https://t.co/", "pack", "LunesDeGanarSeguidores FelizLunes", "SabadoDeGanarSeguidores FelizSabado", "MiercolesDeGanarSeguidores FelizMiercoles", "DomingoDeGanarSeguidores FelizDomingo", "DomingoDeGanarSeguidores", "ViernesDeGanarSeguidores", "ViernesDeGanarSeguidores FelizViernes", "ven", "Feliz lunes", "persona", "Premium up", "quiero", "FelizDomingo"])
     
     def generate_word_cloud(self):
         return WordCloud(background_color='white', stopwords=self.stop_words, max_words=self.max_words).generate(self.text)
