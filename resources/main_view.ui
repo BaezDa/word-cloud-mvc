@@ -75,7 +75,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>3</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="home">
           <property name="maximumSize">
@@ -236,7 +236,7 @@
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_8">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,1">
+            <layout class="QVBoxLayout" name="verticalLayout_7" stretch="0,0,1">
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_5">
                <item>
@@ -260,6 +260,13 @@
                 </widget>
                </item>
               </layout>
+             </item>
+             <item>
+              <widget class="Line" name="line_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="QFrame" name="frameHist">
