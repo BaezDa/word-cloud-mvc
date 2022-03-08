@@ -17,3 +17,4 @@ class MainView(QMainWindow, Ui_MainWindow):
         self.file_dialog = QFileDialog(self)
         self.mpl_canvas_cloud = MplCanvas(self, width=6, height=4, dpi=100)
         self.mpl_canvas_hist = MplCanvas(self, width=6, height=4, dpi=100)
+        self.tabWidget.setCurrentIndex(0)

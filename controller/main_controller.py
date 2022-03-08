@@ -49,7 +49,6 @@ class MainController():
         self.view.btnShowHist.clicked.connect(self.show_hist)
         
         #Red neuronal
-        # self.view.btnLoadData.clicked.connect(self.load_data)
         self.view.btnTrain_2.clicked.connect(self.train)
         
         
@@ -179,6 +178,9 @@ class MainController():
         self.view.mpl_canvas_hist.show()
         
     def load_data(self):
+        """ Carga los datos del CSV.
+        
+        """
         self.all_data = pd.read_csv(self.path)
         
         input_columns =  self.all_data[['Actores', 'Casting', 'Cortometraje', 'Cameo', 'Director', 'Cámara', 'Doblaje', 'Guión']]
@@ -213,6 +215,10 @@ class MainController():
         #     print("OK!")
     
     def onStateChange(self, state):
+        """ Verfica la marcación de los checkbox.
+        Usa el método sender() de la vista para saber que
+        checkbox ha sido marcado.
+        """
         
         if state == QtCore.Qt.Checked:
             if self.view.sender() == self.view.checkboxActors_2:
@@ -251,7 +257,6 @@ class MainController():
         print(self.question)
     
     def send(self):
-        print ("Considering new situation [1, 0, 0, 1, 0, 1, 0, 1] -> ?: ")
         print (self.neural_network.think(np.array(self.question)))
         ans = np.array2string(self.neural_network.think(np.array(self.question)))
         self.view.lineEditAns.setText(ans)

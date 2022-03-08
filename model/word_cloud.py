@@ -2,7 +2,7 @@ from wordcloud import WordCloud
 
 import nltk
 from nltk.corpus import stopwords
-nltk.download('stopwords')
+nltk.download('stopwords', quiet=True)
 
 import matplotlib.pyplot as plt
 
